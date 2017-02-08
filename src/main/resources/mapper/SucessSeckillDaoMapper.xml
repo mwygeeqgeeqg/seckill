@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.seckill.dao.SuccessSeckillDao">
+
+
+	<insert id="inserSuccessKilled">
+		<!-- 主键冲突，重复会报错 -->
+		inser ignore into success_sckill(seckill_id,user_phone)
+		values (#{seckillId},#{userPhone})
+	</insert>
+
+	<!-- 根据id查询successKilled并携带seckill实体 -->
+	<!-- 如果告诉MYBatis把结果映射到Successkilled 同时映射seckill的实体 -->
+	<!-- 可以自用控制sql -->
+	<select id="queryByIdWithSeckill" resultType="SuccessKilled">
+		select
+		sk.seckill_id,sk.user_phone,sk.create_time,sk.status,s.seckill_id,s.name,s.number,s.start_time,s.end_time,s.create_time
+		from success_seckill sk
+		inner join seckill s on sk.seckill_id= s.seckill_id
+		where sk.seckill_id=#{seckillId}
+	</select>
+</mapper>
