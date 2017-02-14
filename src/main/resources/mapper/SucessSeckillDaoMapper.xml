@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<insert id="inserSuccessKilled">
 		<!-- 主键冲突，重复会报错 -->
-		inser ignore into success_sckill(seckill_id,user_phone)
+		insert ignore into success_seckill(seckill_id,phone)
 		values (#{seckillId},#{userPhone})
 	</insert>
 
@@ -16,9 +16,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 可以自用控制sql -->
 	<select id="queryByIdWithSeckill" resultType="SuccessSecKill">
 		select
-		sk.seckill_id,sk.user_phone,sk.create_time,sk.status,s.seckill_id,s.name,s.number,s.start_time,s.end_time,s.create_time
+		sk.seckill_id,sk.phone,sk.create_time,sk.status,s.seckill_id,s.name,s.number,s.start_time,s.end_time,s.create_time
 		from success_seckill sk
 		inner join seckill s on sk.seckill_id= s.seckill_id
-		where sk.seckill_id=#{seckillId}
+		where sk.seckill_id=#{seckillId} and sk.phone=#{userPhone}
 	</select>
 </mapper>

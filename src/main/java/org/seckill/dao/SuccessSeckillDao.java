@@ -1,5 +1,6 @@
 package org.seckill.dao;
 
+import org.apache.ibatis.annotations.Param;
 import org.seckill.entity.SuccessSeckill;
 
 public interface SuccessSeckillDao {
@@ -10,12 +11,11 @@ public interface SuccessSeckillDao {
 	 * @param userPhone
 	 * @return
 	 */
-	int inserSuccessKilled(long seckillId,long userPhone);
-	
+	int inserSuccessKilled(@Param("seckillId") long seckillId, @Param("userPhone") long userPhone);
 	/**
 	 * 查询SuccessSeckill的信息，并携带Seckill的对象实体
 	 * @param seckillId
 	 * @return
 	 */
-	SuccessSeckill queryByIdWithSeckill(long seckillId);
+	SuccessSeckill queryByIdWithSeckill(@Param("seckillId") long seckillId,@Param("userPhone") long userPhone);
 }
