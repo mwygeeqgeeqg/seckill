@@ -12,6 +12,10 @@ import org.seckill.entity.Seckill;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+/**
+ * 配置spring和junit整合，junit启动加载pring IDC容器
+ * spring－test，junit
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 //告诉junitspring配置文件
 @ContextConfiguration("classpath:spring/spring-dao.xml")

@@ -29,6 +29,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<!-- 当获取连接失败重试次数 -->
 		<property name="acquireRetryAttempts" value="2"/>
 	</bean>
+	<!--约定大于配置-->
 	<!-- 配置SqlSessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 注入数据库连接池 -->

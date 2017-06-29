@@ -1,6 +1,6 @@
 package org.seckill.dto;
 /**
- * 暴露地址
+ * 暴露秒杀地址DTO
  * @author liguotao
  *
  */
@@ -19,9 +19,10 @@ public class Exposer {
 	//结束时间
 	private long end ;
 
-	public Exposer(boolean exposed,  long now, long start, long end) {
+	public Exposer(boolean exposed,long seckillId,  long now, long start, long end) {
 		super();
 		this.exposed = exposed;
+		this.seckillId=seckillId;
 		this.now = now;
 		this.start = start;
 		this.end = end;
