@@ -12,12 +12,12 @@ use seckill;
 
 create table seckill(
 
-	'seckill_ids' bigint NOT NULL AUTO_INCREMENT COMMENT '商品库存ID',
-	'name' varchar(60) NOT NULL COMMENT '商品名称',
-	'number' int not null comment '库存数量',
-	'start_time' timestamp not null comment '秒杀开启时间',
-	'end_time' timestamp not null comment '秒杀结束时间',
-	'create_time' timestamp not null default current_timestamp comment '创建时间',
+	`seckill_id` bigint NOT NULL AUTO_INCREMENT COMMENT '商品库存ID',
+	`name` varchar(60) NOT NULL COMMENT '商品名称',
+	`number` int not null comment '库存数量',
+	`start_time` timestamp not null comment '秒杀开启时间',
+	`end_time` timestamp not null comment '秒杀结束时间',
+	`create_time` timestamp not null default current_timestamp comment '创建时间',
 	primary key (seckill_id),
 	key idx_start_time(start_time),
 	key idx_end_time(end_time),
@@ -27,10 +27,10 @@ create table seckill(
 --初始化数据
 
 insert into seckill(name,number,start_time,end_time,create_time) values(
-'100元秒杀iphone7',100,'2017-01-01 00:00:00','2017-01-03 00:00:00',
-'50元秒杀ipad3',100,'2017-01-01 00:00:00','2017-01-03 00:00:00',
-'30元秒杀mi5',100,'2017-01-01 00:00:00','2017-01-03 00:00:00',
-'10元秒杀华为荣耀7',100,'2017-01-01 00:00:00','2017-01-03 00:00:00'
+'100元秒杀iphone7',100,'2017-01-01 00:00:00','2017-01-03 00:00:00','2017-12-23 00:00:00'),
+('50元秒杀ipad3',100,'2017-01-01 00:00:00','2017-01-03 00:00:00','2017-12-23 00:00:00'),
+('30元秒杀mi5',100,'2017-01-01 00:00:00','2017-01-03 00:00:00','2017-12-23 00:00:00'),
+('10元秒杀华为荣耀7',100,'2017-01-01 00:00:00','2017-01-03 00:00:00','2017-12-23 00:00:00'
 );
 
 

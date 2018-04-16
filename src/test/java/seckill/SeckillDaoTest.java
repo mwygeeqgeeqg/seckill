@@ -34,16 +34,16 @@ public class SeckillDaoTest {
 	}
 	@Test
 	public void testQueryAll(){
-		List<Seckill> seckillList = seckillDao.queryAll(0, 5);
-		for (Seckill seckill : seckillList) {
-			System.out.println(seckill);
-		}
+//		List<Seckill> seckillList = seckillDao.queryAll(0, 5);
+//		for (Seckill seckill : seckillList) {
+//			System.out.println(seckill);
+//		}
 	}
 	@Test
 	public void testReduceNumber(){
-		Date killTime = new Date();
-		int updateCount = seckillDao.reduceNumber(1000L, killTime);
-		System.out.println(updateCount);
+//		Date killTime = new Date();
+//		int updateCount = seckillDao.reduceNumber(1000L, killTime);
+//		System.out.println(updateCount);
 		
 	}
 }
