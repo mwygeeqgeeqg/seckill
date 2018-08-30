@@ -12,7 +12,7 @@ public class LoginController {
     @RequestMapping(value = "/login")
     public String login(){
         System.out.println("登陆成功");
-        return "main";
+        return "login";
     }
 
 }
