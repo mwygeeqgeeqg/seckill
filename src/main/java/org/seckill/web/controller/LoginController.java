@@ -14,5 +14,10 @@ public class LoginController {
         System.out.println("登陆成功");
         return "login";
     }
+    @RequestMapping(value = "/main")
+    public String toMain(){
+
+        return "main";
+    }
 
 }
