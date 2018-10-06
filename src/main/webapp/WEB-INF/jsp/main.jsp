@@ -12,7 +12,7 @@
         <div class="col-md-12 column">
             <ul class="nav nav-tabs">
                 <li class="active">
-                    <a href="#">首页</a>
+                    <a href="#">首页 ${userName}</a>
                 </li>
                 <li>
                     <a href="#">简介</a>
